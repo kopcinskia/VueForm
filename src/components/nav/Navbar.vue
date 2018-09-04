@@ -1,3 +1,4 @@
+<!-- TODO okrój-->
 <template>
   <header>
     <b-navbar toggleable="md" type="dark" variant="info">

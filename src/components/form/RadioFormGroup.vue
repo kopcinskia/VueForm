@@ -8,7 +8,7 @@
     <b-form-radio-group v-bind:id=name :options="options"></b-form-radio-group>
   </b-form-group>
 </template>
-
+<!-- TODO options z propsów przez array -->
 <script>
   export default {
     name: 'RadioFormGroup',

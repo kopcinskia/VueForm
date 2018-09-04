@@ -11,7 +11,7 @@
     <b-form-input v-bind:id=name :state="state" v-model.trim="value"></b-form-input>
   </b-form-group>
 </template>
-
+<!-- TODO stwóż pożądną walidację -->
 <script>
   export default {
     name: 'InputFormGroup',
