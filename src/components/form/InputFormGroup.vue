@@ -3,31 +3,31 @@
     id="fieldset1"
     v-bind:description=description
     v-bind:label=label
-    label-for="input1"
+    v-bind:label-for=name
     :invalid-feedback="invalidFeedback"
     :valid-feedback="validFeedback"
     :state="state"
   >
-    <b-form-input id="input1" :state="state" v-model.trim="name"></b-form-input>
+    <b-form-input v-bind:id=name :state="state" v-model.trim="value"></b-form-input>
   </b-form-group>
 </template>
 
 <script>
   export default {
-    name: 'FormGroup',
+    name: 'InputFormGroup',
     props: {
       description: String,
       label: String,
-      value: String,
+      name: String,
     },
     computed: {
       state () {
-        return this.name.length >= 4 ? true : false
+        return this.value.length >= 4 ? true : false
       },
       invalidFeedback () {
-        if (this.name.length > 4) {
+        if (this.value.length > 4) {
           return ''
-        } else if (this.name.length > 0) {
+        } else if (this.value.length > 0) {
           return 'Enter at least 4 characters'
         } else {
           return 'Please enter something'
@@ -39,13 +39,20 @@
     },
     data () {
       return {
-        name: ''
+        value: ''
       }
     }
   }
 </script>
 
 <style scoped>
+
+  div {
+    margin: 1em 3em;
+    text-align: left;
+    max-width: 20em;
+
+  }
 
 </style>
 

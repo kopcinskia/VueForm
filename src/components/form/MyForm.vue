@@ -1,13 +1,23 @@
 <template>
-  <FormGroup description="siemanko" label="labelka"/>
+  <div>
+    <InputFormGroup description="wprowadź swoje imie" label="Imię" name="imie"/>
+    <InputFormGroup description="wprowadź swój email" label="Email" name="email"/>
+    <RadioFormGroup description="wybierz swoją płeć" label="Płeć" name="plec"
+                    options="[
+                      { text: this.name, value: 'K' },
+                      { text: 'Męszczyzna', value: 'M' },
+                    ]"
+    ></RadioFormGroup>
+  </div>
 </template>
 
 <script>
-  import FormGroup from './FormGroup'
+  import InputFormGroup from './InputFormGroup'
+  import RadioFormGroup from './RadioFormGroup'
 
   export default {
     name: 'form',
-    components: {FormGroup},
+    components: {RadioFormGroup, InputFormGroup},
 
   }
 </script>
