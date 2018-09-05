@@ -51,5 +51,8 @@
 </script>
 
 <style scoped>
-
+  header{
+    margin: 0em;
+    padding: 0em;
+  }
 </style>

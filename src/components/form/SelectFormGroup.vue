@@ -1,6 +1,6 @@
 <template>
   <b-form-group
-    id="inputForm"
+    id="selectForm"
     v-bind:description=description
     v-bind:label=label
     v-bind:label-for=name
@@ -8,21 +8,23 @@
     :valid-feedback="validFeedback"
     :state="state"
   >
-    <b-form-input v-bind:id=name :state="state" v-model.trim="value"></b-form-input>
+    <b-form-select v-bind:id=name :state="state" :options="options" ></b-form-select>
   </b-form-group>
 </template>
 <!-- TODO stwóż pożądną walidację -->
 <script>
   export default {
-    name: 'InputFormGroup',
+    name: 'SelectFormGroup',
     props: {
       description: String,
       label: String,
       name: String,
+      options: Array,
     },
     computed: {
       state () {
-        return this.value.length >= 4 ? true : false
+        //TODO walidacja coś na ten typ z aktualnie wybrą opcją
+        return this.options[2].value.length >= 1 ? true : false
       },
       invalidFeedback () {
         if (this.value.length > 4) {
@@ -39,7 +41,7 @@
     },
     data () {
       return {
-        value: ''
+        value: 'a'
       }
     }
   }
@@ -51,6 +53,8 @@
     margin: 1em auto;
     text-align: left;
     max-width: 20em;
+
+
   }
 
 </style>

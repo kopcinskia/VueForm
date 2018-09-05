@@ -1,6 +1,6 @@
 <template>
   <b-form-group
-    id="fieldset1"
+    id="radioForm"
     v-bind:description=description
     v-bind:label=label
     v-bind:label-for=name
@@ -8,7 +8,7 @@
     <b-form-radio-group v-bind:id=name :options="options"></b-form-radio-group>
   </b-form-group>
 </template>
-<!-- TODO options z propsów przez array -->
+
 <script>
   export default {
     name: 'RadioFormGroup',
@@ -16,23 +16,16 @@
       description: String,
       label: String,
       name: String,
+      options: Array,
     },
-    data () {
-      return {
-        selected: 'K',
-        options: [
-          {text: 'Kobieta', value: 'K'},
-          {text: 'Męszczyzna', value: 'M'},
-        ]
-      }
-    }
+
   }
 </script>
 
 <style scoped>
 
   div {
-    margin: 0.1em 3em 1em 3em;
+    margin: 0.1em auto;
     text-align: left;
     max-width: 20em;
 
