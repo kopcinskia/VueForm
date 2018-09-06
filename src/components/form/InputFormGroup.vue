@@ -19,6 +19,7 @@
       description: String,
       label: String,
       name: String,
+      
     },
     computed: {
       state () {

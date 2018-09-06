@@ -1,6 +1,6 @@
 <template>
   <div>
-    <InputFormGroup description="wprowadź swoje imie" label="Imię:" name="imie"/>
+    <InputFormGroup description="wprowadź swoje imie" label="Imię:" name="imie" validations="{required, minLenght: minLenght(4)}"/>
     <InputFormGroup description="wprowadź swój email" label="Email:" name="email"/>
     <RadioFormGroup description="wybierz swoją płeć" label="Płeć:" name="plec"
                     :options="[
@@ -17,8 +17,7 @@
                         { value: '50+', text: 'mam powyżej 50 lat' }
                      ]"
     ></SelectFormGroup>
-    <input v-validate="'required|email'" name="email" type="text">
-    <span>{{ errors.first('email') }}</span>
+    <validate-example></validate-example>
   </div>
 </template>
 
@@ -26,10 +25,11 @@
   import InputFormGroup from './InputFormGroup'
   import RadioFormGroup from './RadioFormGroup'
   import SelectFormGroup from "./SelectFormGroup";
+  import ValidateExample from "./validateExample";
 
   export default {
     name: 'myForm',
-    components: {SelectFormGroup, RadioFormGroup, InputFormGroup},
+    components: {ValidateExample, SelectFormGroup, RadioFormGroup, InputFormGroup},
 
   }
 </script>
