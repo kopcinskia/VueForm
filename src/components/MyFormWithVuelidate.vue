@@ -1,6 +1,7 @@
 <template>
   <div>
     <NameFormGroup></NameFormGroup>
+    <EmailFormGroup></EmailFormGroup>
 
   </div>
 </template>
@@ -8,10 +9,11 @@
 <script>
 
   import NameFormGroup from './form_vuelidation/NameFormGroup';
+  import EmailFormGroup from './form_vuelidation/EmailFormGroup';
 
   export default {
     name: 'myForm',
-    components: {NameFormGroup},
+    components: {NameFormGroup, EmailFormGroup},
 
   }
 </script>
