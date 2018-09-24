@@ -5,13 +5,20 @@
 
       <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
-      <b-navbar-brand href="#">NavBar</b-navbar-brand>
+      <b-navbar-brand to="/">Vue Form</b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
 
         <b-navbar-nav>
-          <b-nav-item to="/vue">Go to Vue</b-nav-item>
+          <b-nav-item to="/vuelidate">Go to VuelidateForm</b-nav-item>
+        </b-navbar-nav>
 
+        <b-navbar-nav>
+          <b-nav-item to="/bootstrap">Go to BootstrapForm</b-nav-item>
+        </b-navbar-nav>
+
+        <b-navbar-nav>
+          <b-nav-item to="/vue">Go to VueDoc</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -46,7 +53,7 @@
 
 <script>
   export default {
-      name: 'navbar'
+      name: 'Navbar'
   }
 </script>
 

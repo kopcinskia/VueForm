@@ -17,19 +17,18 @@
                         { value: '50+', text: 'mam powyżej 50 lat' }
                      ]"
     ></SelectFormGroup>
-    <validate-example></validate-example>
+
   </div>
 </template>
 
 <script>
-  import InputFormGroup from './InputFormGroup'
-  import RadioFormGroup from './RadioFormGroup'
-  import SelectFormGroup from "./SelectFormGroup";
-  import ValidateExample from "./validateExample";
+  import InputFormGroup from './form_bootstrap/InputFormGroup';
+  import RadioFormGroup from './form_bootstrap/RadioFormGroup';
+  import SelectFormGroup from './form_bootstrap/SelectFormGroup';
 
   export default {
     name: 'myForm',
-    components: {ValidateExample, SelectFormGroup, RadioFormGroup, InputFormGroup},
+    components: { SelectFormGroup, RadioFormGroup, InputFormGroup},
 
   }
 </script>

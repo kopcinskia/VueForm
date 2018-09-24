@@ -1,21 +1,22 @@
 <template>
   <b-form @submit="onSubmit">
-    <b-form-group id="exampleInputGroup1"
-                  label="Name"
+    <b-form-group class="nameFormGroup"
+                  label="Name: "
                   label-for="exampleInput1">
-      <b-form-input id="exampleInput1"
+      <b-form-input name="name"
                     type="text"
                     v-model="form.name"
                     :state="!$v.form.name.$invalid"
                     aria-describedby="LiveFeedback, RequiredFeedback"
-                    placeholder="Enter name" />
-      <b-form-invalid-feedback id="LiveFeedback" v-if="!$v.form.name.minLength">
+                    placeholder="Enter your name" />
+      <b-form-invalid-feedback id="LiveFeedback" class="validationMess" v-if="!$v.form.name.minLength">
         This field must be at least 3 characters
       </b-form-invalid-feedback>
-      <b-form-invalid-feedback id="RequiredFeedback" v-if="!$v.form.name.required">
+      <b-form-invalid-feedback id="RequiredFeedback" class="validationMess" v-if="!$v.form.name.required">
         This field is a required
       </b-form-invalid-feedback>
     </b-form-group>
+
     <b-button type="submit"
               variant="primary"
               :disabled="$v.form.$invalid">
@@ -29,7 +30,7 @@
   import { required, minLength } from "vuelidate/lib/validators"
 
   export default {
-    name: "validateExample",
+    name: "nameFormGroup",
     data() {
       return {
         form: {}
@@ -54,4 +55,17 @@
   }
 </script>
 
-<!-- form-validation-1.vue -->
+<style scoped>
+
+  .validationMess {
+    margin-top: 0em;
+  }
+  div {
+    margin: 1em auto;
+    text-align: left;
+    max-width: 20em;
+
+  }
+
+</style>
+
