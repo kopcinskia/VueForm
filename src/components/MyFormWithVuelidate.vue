@@ -6,7 +6,7 @@
     <AgeFormGroup></AgeFormGroup>
   </div>
 </template>
-
+<!-- TODO added submit button works with validation -->
 <script>
 
   import NameFormGroup from './form_vuelidation/NameFormGroup';

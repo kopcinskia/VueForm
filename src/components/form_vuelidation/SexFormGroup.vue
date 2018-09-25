@@ -43,9 +43,6 @@
 
 <style scoped>
 
-  .validationMess {
-    margin-top: 0em;
-  }
   .radioFormGroup {
     margin: 1em auto;
     text-align: left;
