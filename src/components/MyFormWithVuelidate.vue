@@ -2,7 +2,8 @@
   <div>
     <NameFormGroup></NameFormGroup>
     <EmailFormGroup></EmailFormGroup>
-
+    <SexFormGroup></SexFormGroup>
+    <AgeFormGroup></AgeFormGroup>
   </div>
 </template>
 
@@ -10,10 +11,13 @@
 
   import NameFormGroup from './form_vuelidation/NameFormGroup';
   import EmailFormGroup from './form_vuelidation/EmailFormGroup';
+  import SexFormGroup from './form_vuelidation/SexFormGroup';
+  import AgeFormGroup from './form_vuelidation/AgeFormGroup';
+
 
   export default {
     name: 'myForm',
-    components: {NameFormGroup, EmailFormGroup},
+    components: {AgeFormGroup, SexFormGroup, NameFormGroup, EmailFormGroup},
 
   }
 </script>
@@ -24,4 +28,6 @@
     margin: 0.2em;
     padding: 0.5em;
   }
+
+
 </style>
